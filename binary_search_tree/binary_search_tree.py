@@ -10,8 +10,8 @@ This part of the project comprises two days:
    on the BSTNode class.
 """
 
-from queue.queue import Queue
-from stack.stack import Stack
+# from queue.queue import Queue
+# from stack.stack import Stack
 
 class BSTNode:
     def __init__(self, value):
@@ -111,33 +111,35 @@ class BSTNode:
 
     # Print the value of every node, starting with the given node,
     # in an iterative breadth first traversal
-    def bft_print(self, node):
-        queue = Queue()
-        queue.enqueue(node)
-        while queue.size > 0:
-            current_node = queue.dequeue()
-            print(current_node.value)
-            if current_node.right:
-                queue.enqueue(current_node.right)
-            if current_node.left:
-                queue.enqueue(current_node.left)
-        pass
+
+    # def bft_print(self, node):
+    #     queue = Queue()
+    #     queue.enqueue(node)
+    #     while queue.size > 0:
+    #         current_node = queue.dequeue()
+    #         print(current_node.value)
+    #         if current_node.right:
+    #             queue.enqueue(current_node.right)
+    #         if current_node.left:
+    #             queue.enqueue(current_node.left)
+    #     pass
 
     # Print the value of every node, starting with the given node,
     # in an iterative depth first traversal
-    def dft_print(self, node):
-        # create a stack (or copy from Stack file)
-        stack = Stack()
-        # push some initial value(s) onto the stack
-        stack.push(node)  # front-loads the stack before it begins (so the while loop runs)
-        while stack.size > 0:
-            current_node = stack.pop()
-            print(current_node.value)
-            if current_node.right:
-                stack.push(current_node.right)
-            if current_node.left:
-                stack.push(current_node.left)
-        pass
+
+    # def dft_print(self, node):
+    #     # create a stack (or copy from Stack file)
+    #     stack = Stack()
+    #     # push some initial value(s) onto the stack
+    #     stack.push(node)  # front-loads the stack before it begins (so the while loop runs)
+    #     while stack.size > 0:
+    #         current_node = stack.pop()
+    #         print(current_node.value)
+    #         if current_node.right:
+    #             stack.push(current_node.right)
+    #         if current_node.left:
+    #             stack.push(current_node.left)
+    #     pass
 
     # Stretch Goals -------------------------
     # Note: Research may be required
